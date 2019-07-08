@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="250dp"
+    android:layout_height="250dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="공유핸드폰번호"
+        android:gravity="center"
+        android:id="@+id/share_phone_num"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="등록"
+        android:id="@+id/share_add"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="마스터 권한"
+        android:id="@+id/share_master_btn"/>
+</LinearLayout>

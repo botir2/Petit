@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:background="#F6F6F6">
+        <!-- 이름 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.47"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/tv_pfm_reserve_pet_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPink"
+                    android:textSize="18dp"
+                    app:font="nanum"/>
+
+                <TextView
+                    android:id="@+id/tv_rev1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=" 급식예약"
+                    android:textSize="18dp"
+                    app:font="nanum"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 요일 선택 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.35"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/list_tit" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="3dp"
+                            android:text="요일"
+                            android:textSize="18dp"
+                            app:font="nanumbold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:id="@+id/reserve_day_save">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/btn_save03" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPink"
+                            android:text="저장"
+                            android:textSize="18dp"
+                            android:paddingLeft="3dp"
+                            app:font="nanum"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="매일"
+                        android:id="@+id/everyday_btn"
+                        android:background="@drawable/feeder_reservation_btn_gray"
+                        app:font="nanum"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="일요일"
+                        android:id="@+id/sunday_btn"
+                        android:background="@drawable/feeder_reservation_btn_gray"
+                        app:font="nanum"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="월요일"
+                        android:id="@+id/monday_btn"
+                        android:background="@drawable/feeder_reservation_btn_gray"
+                        app:font="nanum"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="화요일"
+                        android:id="@+id/tuesday_btn"
+                        android:background="@drawable/feeder_reservation_btn_gray"
+                        app:font="nanum"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="수요일"
+                        android:id="@+id/wednesday_btn"
+                        android:background="@drawable/feeder_reservation_btn_gray"
+                        app:font="nanum"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="목요일"
+                        android:id="@+id/thursday_btn"
+                        android:background="@drawable/feeder_reservation_btn_gray"
+                        app:font="nanum"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="금요일"
+                        android:id="@+id/friday_btn"
+                        android:background="@drawable/feeder_reservation_btn_gray"
+                        app:font="nanum"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:text="토요일"
+                        android:id="@+id/saturday_btn"
+                        android:background="@drawable/feeder_reservation_btn_gray"
+                        app:font="nanum"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="0.4"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예약급식이 동작되는 요일을 선택하시고 저장버튼을 눌러주세요"
+                    android:textSize="15dp"
+                    android:textScaleX="0.8"
+                    app:font="nanum"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.18">
+            <!-- 급식량 추가 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!-- 리스트 뷰 -->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_pfm_reserve_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:paddingTop="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/list_tit" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="3dp"
+                                        android:text="시간, 급식량추가"
+                                        android:textSize="18dp"
+                                        app:font="nanumbold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/reserve_time_add"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:paddingTop="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/btn_save04" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="3dp"
+                                        android:text="추가"
+                                        android:textColor="@color/colorPink"
+                                        android:textSize="18dp"
+                                        app:font="nanum" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/am_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/feeder_reservation_btn_yellow"
+                                    android:text="오전"
+                                    app:font="nanum" />
+
+                                <Button
+                                    android:id="@+id/pm_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/feeder_reservation_btn_gray"
+                                    android:text="오후"
+                                    app:font="nanum" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="0.4"
+                                android:orientation="horizontal">
+
+                                <!--
+                                api 23 아래 버전은 Spinner 커스텀이 제대로 반영이 되지않아 추후 수정 요망.
+                                 -->
+                                <Spinner
+                                    android:id="@+id/spn_pfm_reserver_times"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    style="@style/spn"
+                                    app:font="nanum"></Spinner>
+
+                                <Spinner
+                                    android:id="@+id/spn_pfm_reserver_provisions"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    style="@style/spn"
+                                    app:font="nanum"></Spinner>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:gravity="center"
+                        android:text="\n하루 중 급식할 시간과 양을 \n최대 20번까지 예약하실 수 있습니다.\n"
+                        app:font="nanum" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/reservation_pb"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+</RelativeLayout>

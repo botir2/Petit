@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="320dp">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        layout="@layout/petit_feeder_add_popup_header"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:text="무선네트워크의 비밀번호를 입력하십시오."
+                        android:textSize="17dp"
+                        android:textScaleX="0.9"
+                        app:font="nanum"/>
+
+                    <TextView
+                        android:id="@+id/tv_pw_wifi_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="default"
+                        android:textSize="25dp"
+                        app:font="nanumbold"/>
+
+                    <EditText
+                        android:id="@+id/ed_wifi_pw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/feeder_add_box_gray"
+                        android:hint="비밀번호 입력"
+                        android:paddingLeft="10dp"
+                        android:lines="1"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        app:font="nanum"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/pb_wifi_wait"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_wifi_pw_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/feeder_add_btn_gray"
+                android:padding="10dp"
+                android:text="취소"
+                android:textSize="15dp"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/btn_wifi_pw_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/feeder_add_btn_pink"
+                android:padding="10dp"
+                android:text="확인"
+                android:textSize="15dp"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

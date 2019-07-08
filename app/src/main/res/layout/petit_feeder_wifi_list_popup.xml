@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="350dp"
+    android:background="@drawable/feeder_add">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        layout="@layout/petit_feeder_add_popup_header"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/wifi_list_exist"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/feeder_wifi_list">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_wifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                    </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/wifi_list_not_exist"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/no_wifi"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="무선인터넷이\n발견되지 않았습니다."
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:font="nanumbold" />
+        </LinearLayout>
+
+    </FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Pet-it을 연결하고자 하는 무선네트워크\n(Wi-Fi)를 선택하십시오."
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:font="nanumbold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/btn_wifi_list_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/feeder_add_btn_gray"
+            android:padding="10dp"
+            android:text="취소"
+            android:textSize="15dp"
+            android:textColor="@color/colorWhite"
+            app:font="nanum"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="재탐색"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:id="@+id/btn_wifi_list_research"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/feeder_add_btn_pink"
+            android:textColor="@color/colorWhite"
+            app:font="nanum"/>
+    </LinearLayout>
+</LinearLayout>

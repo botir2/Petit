@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Petit</string>
+    <string name="host">211.38.86.93</string>
+    <string name="db_host">http://211.38.86.93/petit/query/</string>
+    <string name="mqtt_host">tcp://211.38.86.93</string>
+    <string name="host_id">root</string>
+    <string name="host_pw">niceduri</string>
+    <string name="port">22</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+</resources>

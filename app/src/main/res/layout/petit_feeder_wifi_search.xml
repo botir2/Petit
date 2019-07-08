@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:background="@drawable/feeder_add">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        layout="@layout/petit_feeder_add_popup_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/pb_wifi_search"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="펫스테이션을 연결할 무선네트워크\n(Wi-Fi)를 검색하고 있습니다."
+            android:textSize="15dp"
+            android:layout_toRightOf="@+id/pb_wifi_search"
+            app:font="nanum"/>
+    </LinearLayout>
+</LinearLayout>

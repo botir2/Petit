@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="350dp"
+    android:background="@drawable/feeder_add">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        layout="@layout/petit_feeder_add_popup_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_margin="20dp"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:text="01"
+                    android:textColor="@color/colorPink"
+                    android:textSize="15dp"
+                    app:font="nanum"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="스마트폰이 인터넷에 연결되어 있는지 확인해 주세요."
+                    android:textSize="15dp"
+                    app:font="nanum"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:text="02"
+                    android:textColor="@color/colorPink"
+                    android:textSize="15dp"
+                    app:font="nanum"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="이어폰은 빼고, 블루투스는 끄고, 폰의 음악볼륨은 최대로 올려주세요."
+                    android:textSize="15dp"
+                    app:font="nanum"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="1dp"
+                    android:text="03"
+                    android:textColor="@color/colorPink"
+                    android:textSize="15dp"
+                    app:font="nanum"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="펫스테이션이 초기화 상태인지 확인해주세요.(적색/청색 램프 교대로 점멸)"
+                    android:textSize="15dp"
+                    app:font="nanum"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_feeder_add_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/feeder_add_btn_gray"
+                android:padding="10dp"
+                android:text="취소"
+                android:textSize="15dp"
+                android:textColor="@color/colorWhite"
+                app:font="nanum"/>
+
+            <Button
+                android:id="@+id/btn_feeder_add_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/feeder_add_btn_pink"
+                android:padding="10dp"
+                android:text="확인"
+                android:textSize="15dp"
+                android:textColor="@color/colorWhite"
+                app:font="nanum"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="250dp"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        layout="@layout/petit_feeder_add_popup_header"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="무선네트워크 사용.\nGPS 사용을 허가하셔야\n 무선네트워크 사용이 가능합니다."
+        android:layout_weight="1"
+        android:textSize="20dp"
+        app:font="nanum"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_gps_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/feeder_add_btn_gray"
+            android:padding="10dp"
+            android:text="취소"
+            android:textSize="15dp"
+            android:textColor="@color/colorWhite"
+            app:font="nanum"/>
+
+        <Button
+            android:id="@+id/btn_gps_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/feeder_add_btn_pink"
+            android:padding="10dp"
+            android:text="확인"
+            android:textSize="15dp"
+            android:textColor="@color/colorWhite"
+            app:font="nanum"/>
+    </LinearLayout>
+</LinearLayout>

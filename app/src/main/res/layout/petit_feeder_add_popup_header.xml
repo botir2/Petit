@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@drawable/feeder_add_title"
+    android:layout_gravity="center"
+    android:gravity="center">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/food_a_tit"
+        android:scaleType="fitXY"
+        android:layout_marginRight="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="펫급식기 추가"
+        android:textSize="20dp"
+        android:textColor="@color/colorWhite"
+        app:font="nanum"/>
+</LinearLayout>

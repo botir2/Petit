@@ -1,0 +1,35 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="spn">
+        <item name="android:background">@drawable/feeder_spinner_custom</item>
+
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="CustomWindowTitleBackground">
+        <item name="android:background">@drawable/feeder_add_title</item>
+
+    </style>
+
+    <style name="ThemeWithCorners" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/feeder_add</item>
+    </style>
+
+    <style name="PetitSetting" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/feeder_setting</item>
+    </style>
+
+    <style name="PetitSetting2" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

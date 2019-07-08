@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "open.it.com.petit"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            moduleName "tutorial-4"
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url "https://repo.eclipse.org/content/repositories/paho-releases/"
+        mavenCentral()
+    }
+
+    maven { url "https://jitpack.io" }
+
+    jcenter()
+
+    flatDir {
+        dirs 'libs'
+    }
+
+    mavenCentral()
+    maven { url 'https://maven.google.com' }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    //Permission
+    compile 'gun0912.ted:tedpermission:1.0.2'
+    //RecyclerView
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    //MQTT
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1'
+    compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    //캡쳐
+    compile 'com.muddzdev:viewshot:1.0.2'
+    //글꼴
+    compile 'com.tsengvn:typekit:1.0.1'
+    //QR Code
+    compile 'com.journeyapps:zxing-android-embedded:3.5.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+    //Expandable
+    compile 'com.thoughtbot:expandablerecyclerview:1.3'
+    //Vlc
+    compile 'de.mrmaffen:vlc-android-sdk:2.0.6'
+    //compile 'de.mrmaffen:libvlc-android:2.1.12@aar'
+    //Glide
+    compile 'com.github.bumptech.glide:glide:4.2.0'
+    //FCM
+    compile 'com.google.firebase:firebase-core:11.4.0'
+    compile 'com.google.firebase:firebase-messaging:11.4.0'
+    //Http Connect
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    //GSON
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:design:25.3.1'
+    //Wifi
+    compile 'com.github.pwittchen:networkevents:2.1.6'
+    //Event Bus
+    compile 'com.squareup:otto:1.3.8'
+
+    compile 'com.github.ar-android:libstreaming:1.0.0'
+    testCompile 'junit:junit:4.12'
+
+    androidTestCompile 'com.android.support:support-annotations:23.1.1'
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
+    androidTestCompile 'com.android.support.test:rules:0.4.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    compile project(':com.wowza.gocoder.sdk')
+    compile files('libs/jsch-0.1.54.jar')
+    implementation files('libs/red5-client-1.0.10-M4.jar')
+}
+apply plugin: 'com.google.gms.google-services'

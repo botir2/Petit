@@ -1,0 +1,2 @@
+include ':app', ':com.wowza.gocoder.sdk'
+include ':libvlc-android'
